@@ -1,0 +1,326 @@
+   ▲ Next.js 15.5.19
+   - Local:        http://127.0.0.1:3000
+   - Network:      http://127.0.0.1:3000
+
+ ✓ Starting...
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+ ✓ Ready in 3.1s
+ ○ Compiling / ...
+ ✓ Compiled / in 8.5s (657 modules)
+ GET / 200 in 9715ms
+ ✓ Compiled in 434ms (250 modules)
+ ✓ Compiled in 261ms (250 modules)
+ ✓ Compiled in 7s (650 modules)
+ ✓ Compiled in 351ms (650 modules)
+ ✓ Compiled in 600ms (650 modules)
+ ○ Compiling /api/contact ...
+ ✓ Compiled /api/contact in 3.8s (807 modules)
+ ✓ Compiled in 851ms (637 modules)
+Mindful Living contact enquiry {
+  name: 'Test User',
+  phone: '+91 98765 43210',
+  email: 'test@example.com',
+  service: 'Individual Counselling',
+  message: 'Testing contact form endpoint.',
+  receivedAt: '2026-06-02T08:35:19.343Z'
+}
+ POST /api/contact 200 in 5556ms
+ GET / 200 in 9947ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 1142ms (1449 modules)
+ GET / 404 in 1660ms
+ ✓ Compiled in 813ms (651 modules)
+ ✓ Compiled in 427ms (651 modules)
+ ✓ Compiled in 365ms (651 modules)
+ ✓ Compiled in 490ms (637 modules)
+ ✓ Compiled in 768ms (651 modules)
+ ✓ Compiled in 443ms (651 modules)
+ ✓ Compiled in 449ms (651 modules)
+ ✓ Compiled in 4.6s (651 modules)
+ ✓ Compiled in 1087ms (651 modules)
+ ✓ Compiled in 606ms (651 modules)
+ ✓ Compiled in 992ms (651 modules)
+ ✓ Compiled in 576ms (651 modules)
+ ✓ Compiled in 3s (651 modules)
+ ✓ Compiled in 1665ms (651 modules)
+ ○ Compiling / ...
+   ▲ Next.js 15.5.19
+   - Local:        http://127.0.0.1:3000
+   - Network:      http://127.0.0.1:3000
+
+ ✓ Starting...
+ ✓ Ready in 5.7s
+ ○ Compiling /testimonials ...
+ ✓ Compiled /testimonials in 9.2s (1444 modules)
+ GET /testimonials 200 in 13579ms
+ ○ Compiling / ...
+ ✓ Compiled / in 7.6s (1469 modules)
+ GET / 200 in 9526ms
+ GET / 200 in 719ms
+ GET / 200 in 372ms
+ ○ Compiling /services ...
+ ✓ Compiled /services in 1484ms (1461 modules)
+ GET /services 200 in 3319ms
+ GET /services 200 in 1554ms
+ GET / 200 in 508ms
+ GET / 200 in 376ms
+ ○ Compiling /about ...
+ ✓ Compiled /about in 2s (1467 modules)
+ GET /about 200 in 3039ms
+ GET /about 200 in 461ms
+ GET /about 200 in 547ms
+ GET /about 200 in 603ms
+ GET /about 200 in 734ms
+ GET /about 200 in 800ms
+ GET /about 200 in 655ms
+ GET /about 200 in 762ms
+ GET /about 200 in 533ms
+ GET /services 200 in 604ms
+ GET /about 200 in 271ms
+ GET /testimonials 200 in 393ms
+ ○ Compiling /neurodivergent-support ...
+ ✓ Compiled /neurodivergent-support in 1949ms (1475 modules)
+ ○ Compiling /team ...
+ GET /neurodivergent-support 200 in 2931ms
+ ✓ Compiled /team in 2.7s (1478 modules)
+ GET /team 200 in 3210ms
+ GET / 200 in 470ms
+ ✓ Compiled in 1088ms (656 modules)
+ ✓ Compiled in 1041ms (656 modules)
+ GET / 200 in 997ms
+ GET / 200 in 501ms
+ ✓ Compiled in 2.5s (1492 modules)
+ GET / 200 in 779ms
+ ✓ Compiled in 3.6s (1499 modules)
+ GET / 200 in 762ms
+ GET / 200 in 2007ms
+ GET / 200 in 876ms
+ ✓ Compiled in 3.4s (1499 modules)
+ GET / 200 in 1426ms
+ ✓ Compiled in 1925ms (1499 modules)
+ GET / 200 in 1048ms
+ GET / 200 in 2029ms
+ ✓ Compiled in 2.1s (1499 modules)
+ GET / 200 in 967ms
+ ✓ Compiled in 3.4s (1499 modules)
+ GET / 200 in 1787ms
+ GET / 200 in 1273ms
+ ✓ Compiled in 1254ms (664 modules)
+ GET / 200 in 678ms
+ GET / 200 in 871ms
+ GET / 200 in 1035ms
+ GET / 200 in 777ms
+ GET / 200 in 1597ms
+ GET /about 200 in 281ms
+ GET /services 200 in 609ms
+ GET /services 200 in 249ms
+ GET /services 200 in 260ms
+ GET /services 200 in 441ms
+ GET / 200 in 356ms
+ GET /about 200 in 928ms
+ ○ Compiling /team ...
+ ✓ Compiled /team in 8.7s (838 modules)
+ GET /team 200 in 13670ms
+ GET /team 200 in 662ms
+ GET / 200 in 533ms
+ GET /about 200 in 459ms
+ GET / 200 in 512ms
+ ○ Compiling /neurodivergent-support ...
+ ✓ Compiled /neurodivergent-support in 1174ms (845 modules)
+ GET /neurodivergent-support 200 in 2693ms
+ GET /neurodivergent-support 200 in 631ms
+ GET /neurodivergent-support 200 in 362ms
+ GET /neurodivergent-support 200 in 705ms
+ GET /neurodivergent-support 200 in 349ms
+ ○ Compiling /contact ...
+ ✓ Compiled /contact in 3.8s (1515 modules)
+ GET /contact 200 in 4889ms
+ GET /contact 200 in 453ms
+ GET /contact 200 in 399ms
+ GET /contact 200 in 401ms
+ GET /contact 200 in 252ms
+ GET / 200 in 583ms
+ GET / 200 in 617ms
+ GET /contact 200 in 716ms
+ GET /contact 200 in 338ms
+ GET / 200 in 658ms
+ ✓ Compiled in 7.7s (1503 modules)
+ GET / 200 in 1553ms
+ GET / 200 in 389ms
+ GET / 200 in 2001ms
+ ✓ Compiled in 3.1s (1503 modules)
+ GET / 200 in 987ms
+ ✓ Compiled in 2.6s (1503 modules)
+ GET / 200 in 765ms
+ GET / 200 in 2724ms
+ GET /team 200 in 910ms
+ GET /contact 200 in 329ms
+ GET /contact 200 in 170ms
+ GET /contact 200 in 195ms
+ GET /contact 200 in 168ms
+ GET /contact 200 in 147ms
+ ○ Compiling /testimonials ...
+ ✓ Compiled /testimonials in 1220ms (842 modules)
+ GET /testimonials 200 in 1933ms
+ GET /testimonials 200 in 314ms
+ GET /contact 200 in 96ms
+ GET /about 200 in 344ms
+ GET / 200 in 420ms
+ ✓ Compiled in 2.6s (1504 modules)
+ GET / 200 in 728ms
+ ✓ Compiled in 3.6s (1504 modules)
+ ✓ Compiled in 608ms (665 modules)
+ GET / 200 in 876ms
+ GET / 200 in 277ms
+ ✓ Compiled in 3.8s (1504 modules)
+ ✓ Compiled in 588ms (665 modules)
+ GET / 200 in 792ms
+ GET / 200 in 377ms
+ GET / 200 in 3410ms
+ ✓ Compiled in 6.7s (665 modules)
+ ✓ Compiled in 5.6s (1504 modules)
+ GET / 200 in 5673ms
+ GET / 200 in 265ms
+ ✓ Compiled in 2s (1505 modules)
+ GET / 200 in 577ms
+ ✓ Compiled in 1311ms (1505 modules)
+ GET / 200 in 671ms
+ ✓ Compiled in 949ms (1505 modules)
+ GET / 200 in 568ms
+ ✓ Compiled in 1314ms (1505 modules)
+ GET / 200 in 383ms
+ GET / 200 in 1127ms
+ GET / 200 in 593ms
+ GET / 200 in 566ms
+ GET /contact 200 in 91ms
+ GET /contact 200 in 57ms
+ GET /testimonials 200 in 114ms
+ GET /neurodivergent-support 200 in 117ms
+ ○ Compiling /services ...
+ ✓ Compiled /services in 1299ms (848 modules)
+ GET /services 200 in 1836ms
+ GET / 200 in 514ms
+ GET /services 200 in 225ms
+ GET / 200 in 190ms
+ GET /contact 200 in 74ms
+ GET /neurodivergent-support 200 in 86ms
+ ✓ Compiled in 2.2s (1508 modules)
+ GET /neurodivergent-support 200 in 876ms
+ GET / 200 in 908ms
+ ✓ Compiled in 1675ms (1508 modules)
+ GET /neurodivergent-support 200 in 606ms
+ GET / 200 in 649ms
+ ✓ Compiled in 549ms (665 modules)
+ GET /neurodivergent-support 200 in 213ms
+ GET / 200 in 576ms
+ GET /services 200 in 167ms
+ GET /neurodivergent-support 200 in 1844ms
+ GET /services 200 in 437ms
+ GET /about 200 in 257ms
+ GET /about 200 in 498ms
+ GET / 200 in 157ms
+ GET / 200 in 152ms
+ ✓ Compiled in 2.6s (1508 modules)
+ GET /neurodivergent-support 200 in 728ms
+ GET / 200 in 806ms
+ ✓ Compiled in 1297ms (1508 modules)
+ GET /neurodivergent-support 200 in 827ms
+ GET / 200 in 885ms
+ GET /services 200 in 712ms
+ GET / 200 in 228ms
+ ○ Compiling /api/contact ...
+ ✓ Compiled /api/contact in 1885ms (1528 modules)
+Mindful Living contact enquiry {
+  name: 'ABCD',
+  phone: '9138227324',
+  email: 'priyam.mittal.1235@gmail.com',
+  service: 'Individual Counselling',
+  message: 'test case',
+  receivedAt: '2026-06-02T10:45:51.025Z'
+}
+ POST /api/contact 200 in 2201ms
+ GET /neurodivergent-support 200 in 462ms
+ GET / 200 in 777ms
+ GET /about 200 in 114ms
+ ○ Compiling /contact ...
+ ✓ Compiled /contact in 1056ms (848 modules)
+ GET /contact 200 in 1745ms
+ GET /neurodivergent-support 200 in 483ms
+ GET /contact 200 in 119ms
+ ✓ Compiled /api/contact in 368ms (852 modules)
+Mindful Living contact enquiry {
+  name: 'ABCD',
+  phone: '9138227324',
+  email: 'priyam.mittal.1235@gmail.com',
+  service: 'Individual Counselling',
+  message: 'heellooooo',
+  receivedAt: '2026-06-02T10:50:00.288Z'
+}
+ POST /api/contact 200 in 521ms
+ ✓ Compiled in 1073ms (666 modules)
+ GET /contact 200 in 676ms
+ GET /neurodivergent-support 200 in 672ms
+ ✓ Compiled in 421ms (652 modules)
+ ✓ Compiled in 1795ms (1499 modules)
+ GET /contact 200 in 992ms
+ GET /neurodivergent-support 200 in 1019ms
+ ○ Compiling / ...
+ ✓ Compiled / in 638ms (848 modules)
+ GET / 200 in 1093ms
+ ✓ Compiled in 2.2s (1514 modules)
+ GET /neurodivergent-support 200 in 2431ms
+ GET / 200 in 2850ms
+ GET /neurodivergent-support 200 in 176ms
+ GET / 200 in 441ms
+ ✓ Compiled in 2.8s (1510 modules)
+ GET /neurodivergent-support 200 in 2466ms
+ GET / 200 in 3083ms
+ GET /neurodivergent-support 200 in 583ms
+ GET / 200 in 668ms
+ GET /contact 200 in 646ms
+ ○ Compiling /api/contact ...
+ ✓ Compiled /api/contact in 8.2s (912 modules)
+ POST /api/contact 200 in 9864ms
+ GET /contact 200 in 3827ms
+ GET /neurodivergent-support 200 in 2315ms
+ GET / 200 in 2394ms
+ ○ Compiling /enquiries ...
+ ✓ Compiled /enquiries in 9.9s (1593 modules)
+ GET /enquiries 200 in 12050ms
+ ○ Compiling /api/enquiries ...
+ ✓ Compiled /api/enquiries in 2.6s (1595 modules)
+ GET /api/enquiries 200 in 2835ms
+   Reload env: .env.local
+ ✓ Compiled in 8.3s (1532 modules)
+ GET /enquiries 200 in 565ms
+ GET /neurodivergent-support 200 in 593ms
+ GET / 200 in 1496ms
+   Reload env: .env.local
+ ✓ Compiled in 2.9s (1518 modules)
+ GET /enquiries 200 in 1072ms
+ GET /neurodivergent-support 200 in 1090ms
+ GET / 200 in 1111ms
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 4.8s (1879 modules)
+ GET /contact 500 in 10477ms
+ ○ Compiling /api/contact ...
+ ✓ Compiled /api/contact in 13s (1020 modules)
+ POST /api/contact 200 in 17905ms
+   Reload env: .env.local
+ ✓ Compiled in 11.3s (1783 modules)
+   Reload env: .env.local
+ ✓ Compiled in 3.5s (1769 modules)
+ GET / 200 in 2559ms
+ GET / 200 in 1639ms
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 2.7s (1865 modules)
+ GET /contact 500 in 14530ms
+ GET /contact 500 in 1692ms
+ GET /contact 500 in 246ms
+ GET / 200 in 2022ms
+ GET /contact 500 in 272ms
+[?25h

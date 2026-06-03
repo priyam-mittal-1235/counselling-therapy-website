@@ -1,0 +1,1164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Mindful Living provides professional counselling, therapy, neurodivergent children support, occupational therapy, behaviour therapy, and parent guidance."
+    />
+    <meta
+      name="keywords"
+      content="Mindful Living, counselling, therapy, mental health, occupational therapy, behaviour therapy, neurodivergent children, family counselling"
+    />
+    <title>Mindful Living | Counselling and Therapy Services</title>
+    <style>
+      :root {
+        --sage-950: #172316;
+        --sage-900: #243827;
+        --sage-800: #33503a;
+        --sage-700: #486e52;
+        --sage-600: #5f8b68;
+        --sage-200: #cadbc6;
+        --sage-100: #e6efe3;
+        --sage-50: #f4f8f2;
+        --blue-800: #214e63;
+        --blue-600: #458ba6;
+        --blue-100: #dcecf2;
+        --cream: #fffdf7;
+        --cream-2: #fbf4e6;
+        --neutral: #536057;
+        --ink: #111827;
+        --white: #ffffff;
+        --shadow: 0 22px 55px rgba(27, 52, 36, 0.16);
+        --card-shadow: 0 14px 32px rgba(27, 52, 36, 0.1);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background: var(--cream);
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+        line-height: 1.6;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button,
+      input,
+      select,
+      textarea {
+        font: inherit;
+      }
+
+      .container {
+        width: min(1120px, calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: rgba(255, 255, 255, 0.95);
+        border-bottom: 1px solid rgba(202, 219, 198, 0.72);
+        box-shadow: 0 8px 22px rgba(23, 35, 22, 0.06);
+        backdrop-filter: blur(16px);
+      }
+
+      .nav {
+        min-height: 86px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 28px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        min-width: 230px;
+      }
+
+      .brand-mark {
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        background:
+          radial-gradient(circle at 50% 45%, var(--white) 0 24%, transparent 25%),
+          linear-gradient(135deg, #eaf4e8, #dbeef4);
+        border: 2px solid #d13e5a;
+        color: #d13e5a;
+        font-size: 23px;
+        font-weight: 800;
+      }
+
+      .brand-name {
+        display: block;
+        color: #1b4e86;
+        font-size: 22px;
+        font-weight: 800;
+        letter-spacing: 0;
+        line-height: 1.1;
+      }
+
+      .brand-tagline {
+        display: block;
+        color: #394656;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 18px;
+        font-size: 14px;
+        font-weight: 650;
+        color: #233047;
+      }
+
+      .nav-links a {
+        border-radius: 8px;
+        padding: 8px 10px;
+        transition: 180ms ease;
+      }
+
+      .nav-links a:hover,
+      .nav-links a.active {
+        color: #00695c;
+        outline: 1px solid #00695c;
+      }
+
+      .mobile-toggle {
+        display: none;
+        width: 44px;
+        height: 44px;
+        border-radius: 8px;
+        border: 1px solid var(--sage-200);
+        background: var(--white);
+        color: var(--sage-900);
+        cursor: pointer;
+      }
+
+      .mobile-toggle span {
+        display: block;
+        width: 18px;
+        height: 2px;
+        margin: 4px auto;
+        background: currentColor;
+      }
+
+      .hero {
+        position: relative;
+        overflow: hidden;
+        min-height: calc(100vh - 86px);
+        display: flex;
+        align-items: center;
+        padding: 80px 0 70px;
+        background:
+          radial-gradient(1200px 720px at -10% 105%, rgba(88, 139, 91, 0.42), transparent 45%),
+          radial-gradient(820px 620px at 17% 18%, rgba(193, 215, 181, 0.82), transparent 48%),
+          radial-gradient(680px 560px at 75% -8%, rgba(127, 195, 212, 0.78), transparent 52%),
+          linear-gradient(110deg, #eff7ea 0%, #eef9fb 44%, #ffffff 82%);
+      }
+
+      .hero::before,
+      .hero::after {
+        content: "";
+        position: absolute;
+        border-radius: 999px;
+        pointer-events: none;
+      }
+
+      .hero::before {
+        width: 640px;
+        height: 640px;
+        left: -120px;
+        bottom: -300px;
+        background: rgba(76, 125, 80, 0.28);
+      }
+
+      .hero::after {
+        width: 560px;
+        height: 780px;
+        right: -130px;
+        top: -260px;
+        transform: rotate(28deg);
+        background: rgba(255, 255, 255, 0.5);
+      }
+
+      .hero-grid {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 0.95fr 1.05fr;
+        gap: 68px;
+        align-items: center;
+      }
+
+      .eyebrow {
+        margin: 0 0 14px;
+        color: var(--blue-800);
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .hero h1 {
+        margin: 0;
+        color: #050b1b;
+        font-size: clamp(42px, 6vw, 70px);
+        font-weight: 900;
+        letter-spacing: 0;
+        line-height: 0.98;
+        text-transform: uppercase;
+      }
+
+      .hero-copy {
+        margin: 24px 0 0;
+        max-width: 560px;
+        color: #29465b;
+        font-size: 18px;
+        line-height: 1.7;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 34px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        border-radius: 999px;
+        border: 1px solid transparent;
+        padding: 13px 24px;
+        font-size: 14px;
+        font-weight: 800;
+        transition: 180ms ease;
+      }
+
+      .btn-primary {
+        background: #2366e8;
+        color: var(--white);
+        box-shadow: 0 16px 28px rgba(35, 102, 232, 0.24);
+      }
+
+      .btn-secondary {
+        border-color: #081225;
+        background: rgba(255, 255, 255, 0.62);
+        color: #081225;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+      }
+
+      .hero-media {
+        position: relative;
+      }
+
+      .hero-image {
+        width: min(100%, 520px);
+        margin-left: auto;
+        aspect-ratio: 1.32;
+        object-fit: cover;
+        border-radius: 18px;
+        box-shadow: var(--shadow);
+      }
+
+      .floating-card {
+        position: absolute;
+        left: 8px;
+        bottom: -28px;
+        max-width: 280px;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.94);
+        box-shadow: var(--card-shadow);
+        padding: 18px;
+      }
+
+      .floating-card strong {
+        display: block;
+        color: var(--sage-900);
+        font-size: 15px;
+      }
+
+      .floating-card span {
+        display: block;
+        margin-top: 6px;
+        color: var(--neutral);
+        font-size: 13px;
+      }
+
+      section {
+        padding: 82px 0;
+      }
+
+      .section-soft {
+        background: var(--cream-2);
+      }
+
+      .section-sage {
+        background: var(--sage-50);
+      }
+
+      .section-title {
+        max-width: 760px;
+        margin: 0 auto 46px;
+        text-align: center;
+      }
+
+      .section-title h2 {
+        margin: 0;
+        color: var(--sage-950);
+        font-size: clamp(30px, 4vw, 48px);
+        line-height: 1.12;
+      }
+
+      .section-title p {
+        margin: 16px auto 0;
+        max-width: 690px;
+        color: var(--neutral);
+        font-size: 17px;
+      }
+
+      .about-grid,
+      .support-grid,
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 0.92fr 1.08fr;
+        gap: 48px;
+        align-items: center;
+      }
+
+      .photo-card {
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        background: var(--white);
+      }
+
+      .photo-card img {
+        width: 100%;
+        aspect-ratio: 1.15;
+        object-fit: cover;
+      }
+
+      .content h2 {
+        margin: 0;
+        color: var(--sage-950);
+        font-size: clamp(30px, 4vw, 46px);
+        line-height: 1.14;
+      }
+
+      .content p {
+        margin: 18px 0 0;
+        color: var(--neutral);
+        font-size: 16px;
+      }
+
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+      }
+
+      .card {
+        min-height: 100%;
+        border: 1px solid rgba(202, 219, 198, 0.9);
+        border-radius: 14px;
+        background: var(--white);
+        box-shadow: var(--card-shadow);
+        padding: 26px;
+        transition: 180ms ease;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow);
+      }
+
+      .icon {
+        width: 48px;
+        height: 48px;
+        display: grid;
+        place-items: center;
+        border-radius: 12px;
+        background: var(--sage-100);
+        color: var(--sage-800);
+        font-weight: 900;
+      }
+
+      .card h3 {
+        margin: 20px 0 10px;
+        color: var(--sage-950);
+        font-size: 20px;
+        line-height: 1.25;
+      }
+
+      .card p,
+      .card li {
+        color: var(--neutral);
+        font-size: 15px;
+      }
+
+      .card ul {
+        margin: 16px 0 0;
+        padding-left: 20px;
+      }
+
+      .stats {
+        background: var(--sage-900);
+        color: var(--white);
+        padding: 42px 0;
+      }
+
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
+      }
+
+      .stat {
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.08);
+        padding: 24px;
+        text-align: center;
+      }
+
+      .stat strong {
+        display: block;
+        color: #f5e7bf;
+        font-size: 36px;
+        line-height: 1;
+      }
+
+      .stat span {
+        display: block;
+        margin-top: 10px;
+        color: #e7efe4;
+        font-size: 14px;
+      }
+
+      .support-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+        margin-top: 28px;
+      }
+
+      .support-list div {
+        border-radius: 12px;
+        background: var(--white);
+        box-shadow: var(--card-shadow);
+        padding: 16px;
+        color: var(--sage-900);
+        font-weight: 750;
+      }
+
+      .testimonial-card {
+        position: relative;
+      }
+
+      .quote {
+        color: var(--blue-600);
+        font-size: 38px;
+        font-weight: 900;
+        line-height: 1;
+      }
+
+      .contact-panel {
+        border-radius: 18px;
+        background: var(--white);
+        box-shadow: var(--shadow);
+        padding: 30px;
+      }
+
+      .form-row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+        color: var(--sage-950);
+        font-size: 14px;
+        font-weight: 800;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        border: 1px solid var(--sage-200);
+        border-radius: 10px;
+        background: var(--white);
+        color: var(--sage-950);
+        padding: 13px 14px;
+        outline: none;
+      }
+
+      input:focus,
+      select:focus,
+      textarea:focus {
+        border-color: var(--blue-600);
+        box-shadow: 0 0 0 3px rgba(69, 139, 166, 0.16);
+      }
+
+      textarea {
+        min-height: 132px;
+        resize: vertical;
+      }
+
+      .field {
+        margin-bottom: 16px;
+      }
+
+      .contact-info {
+        display: grid;
+        gap: 16px;
+      }
+
+      .info-card {
+        border-radius: 14px;
+        background: var(--sage-50);
+        border: 1px solid var(--sage-100);
+        padding: 20px;
+      }
+
+      .info-card strong {
+        display: block;
+        color: var(--sage-950);
+      }
+
+      .info-card span {
+        display: block;
+        margin-top: 5px;
+        color: var(--neutral);
+      }
+
+      .footer {
+        background: var(--sage-950);
+        color: var(--white);
+        padding: 54px 0 22px;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1.25fr 0.75fr 1fr;
+        gap: 42px;
+      }
+
+      .footer h3,
+      .footer h4 {
+        margin: 0 0 14px;
+      }
+
+      .footer p,
+      .footer a,
+      .footer li {
+        color: #dbe8d8;
+        font-size: 14px;
+      }
+
+      .footer ul {
+        display: grid;
+        gap: 8px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+
+      .copyright {
+        margin-top: 42px;
+        padding-top: 22px;
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+        color: #dbe8d8;
+        font-size: 14px;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(22px);
+        transition: opacity 620ms ease, transform 620ms ease;
+      }
+
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (max-width: 980px) {
+        .nav {
+          min-height: 76px;
+        }
+
+        .mobile-toggle {
+          display: inline-block;
+        }
+
+        .nav-links {
+          position: absolute;
+          left: 20px;
+          right: 20px;
+          top: 86px;
+          display: none;
+          flex-direction: column;
+          align-items: stretch;
+          gap: 4px;
+          border: 1px solid var(--sage-100);
+          border-radius: 14px;
+          background: var(--white);
+          box-shadow: var(--shadow);
+          padding: 12px;
+        }
+
+        .nav-links.open {
+          display: flex;
+        }
+
+        .hero {
+          min-height: auto;
+          padding-top: 56px;
+        }
+
+        .hero-grid,
+        .about-grid,
+        .support-grid,
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-image {
+          margin: 0;
+          width: 100%;
+        }
+
+        .cards,
+        .footer-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .stats-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 640px) {
+        .container {
+          width: min(100% - 28px, 1120px);
+        }
+
+        .brand-name {
+          font-size: 18px;
+        }
+
+        .brand-tagline {
+          font-size: 9px;
+        }
+
+        .brand-mark {
+          width: 46px;
+          height: 46px;
+        }
+
+        .hero {
+          padding: 46px 0 58px;
+        }
+
+        .hero h1 {
+          font-size: 40px;
+        }
+
+        .hero-copy {
+          font-size: 16px;
+        }
+
+        .hero-actions,
+        .btn {
+          width: 100%;
+        }
+
+        .floating-card {
+          position: static;
+          margin-top: 16px;
+          max-width: none;
+        }
+
+        section {
+          padding: 62px 0;
+        }
+
+        .cards,
+        .stats-grid,
+        .support-list,
+        .form-row,
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        *,
+        *::before,
+        *::after {
+          transition-duration: 0.001ms !important;
+          animation-duration: 0.001ms !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <nav class="container nav" aria-label="Primary navigation">
+        <a class="brand" href="#home" aria-label="Mindful Living home">
+          <span class="brand-mark">ML</span>
+          <span>
+            <span class="brand-name">Mindful Living</span>
+            <span class="brand-tagline">Counselling and Therapy</span>
+          </span>
+        </a>
+        <button class="mobile-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-links">
+          <a class="active" href="#home">Home</a>
+          <a href="#about">About Us</a>
+          <a href="#services">Services</a>
+          <a href="#team">Our Team</a>
+          <a href="#support">Neuro Support</a>
+          <a href="#testimonials">Testimonials</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="reveal">
+            <p class="eyebrow">Mental health and wellness care</p>
+            <h1>We are here to help</h1>
+            <p class="hero-copy">
+              At Mindful Living, we are committed to promoting mental and emotional
+              well-being through professional counselling and therapy services. Our goal
+              is to provide a safe, supportive, and confidential space where individuals
+              can openly discuss their concerns and work towards positive personal growth.
+            </p>
+            <p class="hero-copy">
+              We also provide specialized therapy services for neurodivergent children,
+              including Occupational Therapy and Behaviour Therapy, with compassionate,
+              evidence-based care for each client.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#contact">Book Appointment</a>
+              <a class="btn btn-secondary" href="#services">Our Services</a>
+            </div>
+          </div>
+
+          <div class="hero-media reveal">
+            <img
+              class="hero-image"
+              src="https://images.unsplash.com/photo-1573497491208-6b1acb260507?auto=format&fit=crop&w=1100&q=85"
+              alt="Professional counselling team in a calm therapy setting"
+            />
+            <div class="floating-card">
+              <strong>Safe, private and supportive care</strong>
+              <span>Personalized sessions for emotional wellness, relationships and child development.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section-soft">
+        <div class="container about-grid">
+          <div class="photo-card reveal">
+            <img
+              src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=1000&q=85"
+              alt="A calm therapy room with natural light"
+            />
+          </div>
+          <div class="content reveal">
+            <p class="eyebrow">About Mindful Living</p>
+            <h2>A safe space for emotional well-being and personal growth.</h2>
+            <p>
+              At Mindful Living, we are committed to promoting mental and emotional
+              well-being through professional counselling and therapy services. Our goal
+              is to provide a safe, supportive, and confidential space where individuals
+              can openly discuss their concerns and work towards positive personal growth.
+            </p>
+            <p>
+              We offer counselling and therapeutic services tailored to each client,
+              including specialized care for neurodivergent children through Occupational
+              Therapy, Behaviour Therapy, and parent guidance.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="services">
+        <div class="container">
+          <div class="section-title reveal">
+            <p class="eyebrow">Our Services</p>
+            <h2>Professional support for every stage of life.</h2>
+            <p>
+              Choose from counselling, therapy, developmental support, and family-centered
+              guidance designed around your unique needs.
+            </p>
+          </div>
+          <div class="cards">
+            <article class="card reveal">
+              <div class="icon">01</div>
+              <h3>Counselling Services</h3>
+              <p>Private support for stress, anxiety, emotional difficulties, grief, self-esteem and life transitions.</p>
+              <ul>
+                <li>Individual Counselling</li>
+                <li>Stress Management</li>
+                <li>Anxiety Support</li>
+              </ul>
+            </article>
+            <article class="card reveal">
+              <div class="icon">02</div>
+              <h3>Therapy Services</h3>
+              <p>Structured therapeutic care to build coping skills, resilience, emotional regulation and healthier choices.</p>
+              <ul>
+                <li>Evidence-based support</li>
+                <li>Goal-focused sessions</li>
+                <li>Emotional wellness</li>
+              </ul>
+            </article>
+            <article class="card reveal">
+              <div class="icon">03</div>
+              <h3>Occupational Therapy</h3>
+              <p>Developmental support for neurodivergent children with sensory, motor, attention and routine needs.</p>
+              <ul>
+                <li>Sensory processing</li>
+                <li>Motor skills</li>
+                <li>Daily living skills</li>
+              </ul>
+            </article>
+            <article class="card reveal">
+              <div class="icon">04</div>
+              <h3>Behaviour Therapy</h3>
+              <p>Positive behavior support that identifies needs and teaches practical replacement skills.</p>
+              <ul>
+                <li>Behavior assessment</li>
+                <li>Routine planning</li>
+                <li>Parent coaching</li>
+              </ul>
+            </article>
+            <article class="card reveal">
+              <div class="icon">05</div>
+              <h3>Child and Adolescent Support</h3>
+              <p>Age-sensitive care for children and teens facing emotional, social, behavioral or academic concerns.</p>
+              <ul>
+                <li>Child Counselling</li>
+                <li>Adolescent Counselling</li>
+                <li>Confidence building</li>
+              </ul>
+            </article>
+            <article class="card reveal">
+              <div class="icon">06</div>
+              <h3>Family and Relationship Support</h3>
+              <p>Guided sessions for better communication, conflict resolution, trust and connection.</p>
+              <ul>
+                <li>Family Counselling</li>
+                <li>Relationship Counselling</li>
+                <li>Parent Guidance</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats" aria-label="Mindful Living highlights">
+        <div class="container stats-grid">
+          <div class="stat reveal"><strong>12+</strong><span>Specialized services</span></div>
+          <div class="stat reveal"><strong>1:1</strong><span>Personalized care plans</span></div>
+          <div class="stat reveal"><strong>100%</strong><span>Confidential support</span></div>
+          <div class="stat reveal"><strong>360</strong><span>Family-centered care</span></div>
+        </div>
+      </section>
+
+      <section id="team">
+        <div class="container">
+          <div class="section-title reveal">
+            <p class="eyebrow">Our Team</p>
+            <h2>Experienced professionals with a compassionate approach.</h2>
+            <p>
+              Mindful Living brings together counselling, child therapy, occupational
+              therapy, behaviour support and parent guidance expertise.
+            </p>
+          </div>
+          <div class="cards">
+            <article class="card reveal">
+              <img
+                src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=85"
+                alt="Dr. Aditi Verma"
+                style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 12px"
+              />
+              <h3>Dr. Aditi Verma</h3>
+              <p><strong>Lead Counselling Psychologist</strong></p>
+              <p>Specializes in anxiety support, emotional wellness, stress management and individual therapy.</p>
+            </article>
+            <article class="card reveal">
+              <img
+                src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=800&q=85"
+                alt="Rhea Nair"
+                style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 12px"
+              />
+              <h3>Rhea Nair</h3>
+              <p><strong>Child and Adolescent Therapist</strong></p>
+              <p>Supports children and teens with emotional regulation, confidence building and age-sensitive care.</p>
+            </article>
+            <article class="card reveal">
+              <img
+                src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&q=85"
+                alt="Kavita Menon"
+                style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 12px"
+              />
+              <h3>Kavita Menon</h3>
+              <p><strong>Occupational Therapist</strong></p>
+              <p>Works with neurodivergent children on sensory processing, motor skills and daily routines.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="support" class="section-sage">
+        <div class="container support-grid">
+          <div class="content reveal">
+            <p class="eyebrow">Neurodivergent Children Support</p>
+            <h2>Developmental care that includes the child, parents and daily routines.</h2>
+            <p>
+              Neurodiversity recognizes natural differences in how children think, learn,
+              sense, communicate and engage with the world. Mindful Living offers
+              Occupational Therapy, Behaviour Therapy and parent involvement through
+              individualized care plans.
+            </p>
+            <div class="support-list">
+              <div>Occupational Therapy</div>
+              <div>Behaviour Therapy</div>
+              <div>Parent Guidance</div>
+              <div>Developmental Support</div>
+            </div>
+          </div>
+          <div class="photo-card reveal">
+            <img
+              src="https://images.unsplash.com/photo-1604881991720-f91add269bed?auto=format&fit=crop&w=1000&q=85"
+              alt="Child development support session"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonials">
+        <div class="container">
+          <div class="section-title reveal">
+            <p class="eyebrow">Testimonials</p>
+            <h2>Stories of support, progress and renewed confidence.</h2>
+          </div>
+          <div class="cards">
+            <article class="card testimonial-card reveal">
+              <div class="quote">"</div>
+              <p>Mindful Living helped me feel heard without judgment. The sessions gave me practical tools and a calmer way to handle difficult weeks.</p>
+              <h3>Priya Sharma</h3>
+            </article>
+            <article class="card testimonial-card reveal">
+              <div class="quote">"</div>
+              <p>The team guided our family with patience and clarity. We learned to communicate better and understand each other with more compassion.</p>
+              <h3>Rahul Mehta</h3>
+            </article>
+            <article class="card testimonial-card reveal">
+              <div class="quote">"</div>
+              <p>Our child received thoughtful occupational therapy support, and we were included at every step. The home strategies made a real difference.</p>
+              <h3>Ananya Rao</h3>
+            </article>
+            <article class="card testimonial-card reveal">
+              <div class="quote">"</div>
+              <p>Relationship counselling gave us a calmer way to speak, listen and rebuild trust. The process felt respectful and professional throughout.</p>
+              <h3>Meera and Arjun Kapoor</h3>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section-soft">
+        <div class="container contact-grid">
+          <div class="content reveal">
+            <p class="eyebrow">Contact Us</p>
+            <h2>Start with a confidential conversation.</h2>
+            <p>
+              Reach out to ask a question, request an appointment, or choose the right
+              counselling or therapy service for yourself, your family or your child.
+            </p>
+            <div class="contact-info" style="margin-top: 28px">
+              <div class="info-card">
+                <strong>Phone</strong>
+                <span>+91 XXXXX XXXXX</span>
+              </div>
+              <div class="info-card">
+                <strong>Email</strong>
+                <span>info@mindfulliving.com</span>
+              </div>
+              <div class="info-card">
+                <strong>Address</strong>
+                <span>Placeholder Address</span>
+              </div>
+            </div>
+          </div>
+          <form class="contact-panel reveal" id="contactForm">
+            <div class="form-row">
+              <div class="field">
+                <label for="name">Full name</label>
+                <input id="name" name="name" required placeholder="Your name" />
+              </div>
+              <div class="field">
+                <label for="phone">Phone number</label>
+                <input id="phone" name="phone" required placeholder="+91 XXXXX XXXXX" />
+              </div>
+            </div>
+            <div class="field">
+              <label for="email">Email address</label>
+              <input id="email" name="email" type="email" required placeholder="info@mindfulliving.com" />
+            </div>
+            <div class="field">
+              <label for="service">Service of interest</label>
+              <select id="service" name="service">
+                <option>Individual Counselling</option>
+                <option>Family Counselling</option>
+                <option>Relationship Counselling</option>
+                <option>Child and Adolescent Support</option>
+                <option>Occupational Therapy</option>
+                <option>Behaviour Therapy</option>
+                <option>Parent Guidance</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="message">How can we support you?</label>
+              <textarea id="message" name="message" required placeholder="Share a brief note."></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">Send Enquiry</button>
+            <a class="btn btn-secondary" href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noreferrer" style="margin-left: 8px">
+              WhatsApp
+            </a>
+            <p id="formMessage" style="margin: 16px 0 0; color: var(--sage-800); font-weight: 750"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <h3>Mindful Living</h3>
+            <p>
+              Professional counselling and therapy support for emotional well-being,
+              personal growth, family relationships and developmental care.
+            </p>
+          </div>
+          <div>
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#team">Our Team</a></li>
+              <li><a href="#support">Neuro Support</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Core Services</h4>
+            <ul>
+              <li>Individual Counselling</li>
+              <li>Relationship Counselling</li>
+              <li>Occupational Therapy</li>
+              <li>Behaviour Therapy</li>
+              <li>Parent Guidance</li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyright">Copyright 2026 Mindful Living. All rights reserved.</div>
+      </div>
+    </footer>
+
+    <script>
+      const navLinks = document.querySelector(".nav-links");
+      const toggle = document.querySelector(".mobile-toggle");
+
+      toggle.addEventListener("click", () => {
+        const isOpen = navLinks.classList.toggle("open");
+        toggle.setAttribute("aria-expanded", String(isOpen));
+      });
+
+      document.querySelectorAll(".nav-links a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("open");
+          toggle.setAttribute("aria-expanded", "false");
+        });
+      });
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.16 }
+      );
+
+      document.querySelectorAll(".reveal").forEach((item) => observer.observe(item));
+
+      document.querySelector("#contactForm").addEventListener("submit", (event) => {
+        event.preventDefault();
+        event.currentTarget.reset();
+        document.querySelector("#formMessage").textContent =
+          "Thank you. Your enquiry has been received.";
+      });
+    </script>
+  </body>
+</html>
