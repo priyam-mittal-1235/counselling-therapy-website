@@ -16,8 +16,8 @@ export function Footer() {
     <footer className="bg-sage-900 text-sage-50">
       <div className="site-container grid gap-10 py-14 md:grid-cols-[1.2fr_0.8fr_0.9fr]">
         <div>
-          <Link href="/" className="inline-flex items-center gap-2 sm:gap-3">
-            <img src="/assets/logo.png?v=2" alt="Mindful Living Logo" className="h-10 w-10 sm:h-11 sm:w-11 rounded-full object-cover bg-white p-0.5 border border-white/20" />
+          <Link href="/" className="inline-flex items-center gap-2 sm:gap-3 hover:opacity-90 transition cursor-pointer">
+            <img src="/assets/logo.jpg?v=3" alt="Mindful Living Logo" className="h-10 w-10 sm:h-11 sm:w-11 rounded-full object-cover bg-white p-0.5 border border-white/20" />
             <span>
               <span className="block text-sm sm:text-lg font-bold">Mindful Living</span>
               <span className="block text-[9px] sm:text-xs text-sage-200">Counselling & Therapy</span>

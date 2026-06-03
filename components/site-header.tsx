@@ -5,17 +5,24 @@ import { usePathname } from "next/navigation";
 import { HeartHandshake, Menu, Phone, X } from "lucide-react";
 import { navLinks } from "@/data/site";
 import { useEffect, useState } from "react";
-import { motion, useScroll, useSpring } from "framer-motion";
+import { createPortal } from "react-dom";
+import { motion, useScroll, useSpring, AnimatePresence } from "framer-motion";
 
 export function SiteHeader() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const [isLogoZoomed, setIsLogoZoomed] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
     restDelta: 0.001
   });
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     setIsOpen(false);
@@ -28,17 +35,24 @@ export function SiteHeader() {
         style={{ scaleX }}
       />
       <nav className="site-container flex h-20 items-center justify-between" aria-label="Main">
-        <Link href="/" className="flex items-center gap-2 sm:gap-3" aria-label="Mindful Living home">
-          <img src="/assets/logo.png?v=2" alt="Mindful Living Logo" className="h-10 w-10 sm:h-12 sm:w-12 rounded-full object-cover border border-sage-100/50 shadow-sm" />
-          <span>
-            <span className="block text-sm sm:text-lg font-bold leading-tight text-sage-950">
-              Mindful Living
+        <div className="flex items-center gap-2 sm:gap-3">
+          <img
+            src="/assets/logo.jpg?v=3"
+            alt="Mindful Living Logo"
+            className="h-10 w-10 sm:h-12 sm:w-12 rounded-full object-cover border border-sage-100/50 shadow-sm cursor-zoom-in hover:scale-105 transition duration-200"
+            onClick={() => setIsLogoZoomed(true)}
+          />
+          <Link href="/" className="hover:opacity-90 transition cursor-pointer" aria-label="Mindful Living home">
+            <span>
+              <span className="block text-sm sm:text-lg font-bold leading-tight text-sage-950">
+                Mindful Living
+              </span>
+              <span className="block text-[9px] sm:text-xs font-medium text-neutralwarm-600">
+                Counselling & Therapy
+              </span>
             </span>
-            <span className="block text-[9px] sm:text-xs font-medium text-neutralwarm-600">
-              Counselling & Therapy
-            </span>
-          </span>
-        </Link>
+          </Link>
+        </div>
 
         <div className="hidden items-center gap-5 lg:flex">
           {navLinks.map((link) => {
@@ -111,6 +125,68 @@ export function SiteHeader() {
           </div>
         </div>
       ) : null}
+
+      {mounted && typeof document !== "undefined"
+        ? createPortal(
+            <AnimatePresence>
+              {isLogoZoomed && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  onClick={() => setIsLogoZoomed(false)}
+                  className="fixed inset-0 z-[200] flex items-center justify-center bg-sage-950/70 p-4 backdrop-blur-md cursor-zoom-out"
+                >
+                  <motion.div
+                    initial={{ scale: 0.95, y: 15, opacity: 0 }}
+                    animate={{ scale: 1, y: 0, opacity: 1 }}
+                    exit={{ scale: 0.95, y: 15, opacity: 0 }}
+                    transition={{ type: "spring", damping: 28, stiffness: 320 }}
+                    onClick={(e) => e.stopPropagation()}
+                    className="relative w-full max-w-[360px] overflow-hidden rounded-2xl border border-sage-200/60 bg-cream-50 p-6 text-center shadow-2xl cursor-default"
+                  >
+                    {/* Close Button */}
+                    <button
+                      type="button"
+                      onClick={() => setIsLogoZoomed(false)}
+                      className="absolute top-4 right-4 flex h-8 w-8 items-center justify-center rounded-full bg-white text-sage-900 shadow-sm border border-sage-100 hover:bg-sage-50 transition cursor-pointer"
+                      aria-label="Close logo viewer"
+                    >
+                      <X className="h-4 w-4" />
+                    </button>
+
+                    {/* Title Header */}
+                    <div className="mb-5 mt-2">
+                      <h3 className="text-lg font-bold text-sage-950 tracking-tight">
+                        Mindful Living
+                      </h3>
+                      <p className="text-xs font-semibold uppercase tracking-wider text-sage-600/80 mt-0.5">
+                        Counselling & Therapy
+                      </p>
+                    </div>
+
+                    {/* Framed Logo Image */}
+                    <div className="mx-auto aspect-square w-full max-w-[220px] rounded-full border border-sage-100/80 bg-white p-2.5 shadow-md flex items-center justify-center">
+                      <img
+                        src="/assets/logo.jpg?v=3"
+                        alt="Mindful Living Logo"
+                        className="h-full w-full rounded-full object-cover"
+                      />
+                    </div>
+
+                    {/* Tagline Footer */}
+                    <div className="mt-5 pt-4 border-t border-sage-100">
+                      <p className="text-sm font-medium text-sage-800 italic">
+                        "Calm mind. Better life."
+                      </p>
+                    </div>
+                  </motion.div>
+                </motion.div>
+              )}
+            </AnimatePresence>,
+            document.body
+          )
+        : null}
     </header>
   );
 }

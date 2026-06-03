@@ -268,7 +268,7 @@ export default function HomePage() {
           <Reveal type="scale">
             <div className="relative overflow-hidden rounded-2xl border-4 border-sage-100 bg-sage-50 p-3 shadow-soft hover-glow-img">
               <img
-                src="/muskaan-garg-white.jpg"
+                src="/muskaan-garg-white.jpg?v=2"
                 alt="Muskaan Garg"
                 className="aspect-[3/4] w-full rounded-xl object-cover object-top shadow-card"
               />

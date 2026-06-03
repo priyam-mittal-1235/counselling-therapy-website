@@ -17,7 +17,7 @@ export default function TherapistPage() {
         eyebrow="Founder & Therapist"
         title="Muskaan Garg"
         description="Providing compassionate, evidence-based counselling and psychological support in a confidential, warm environment."
-        image="/muskaan-garg-real.jpg"
+        image="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1800&q=85"
       />
 
       <section className="section-padding bg-cream-50">
@@ -25,7 +25,7 @@ export default function TherapistPage() {
           <Reveal>
             <div className="relative overflow-hidden rounded-2xl border-4 border-white bg-white p-3 shadow-soft">
               <img
-                src="/muskaan-garg-real.jpg"
+                src="/muskaan-garg-white.jpg?v=2"
                 alt="Muskaan Garg"
                 className="aspect-[3/4] w-full rounded-xl object-cover object-center shadow-card"
               />
