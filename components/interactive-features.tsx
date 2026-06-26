@@ -320,3 +320,116 @@ export function AnimatedFaqSection() {
     </section>
   );
 }
+
+// ─── NEURO SUPPORT SERVICES ACCORDION ────────────────────────────────────────
+const NEURO_SERVICES = [
+  {
+    name: "Occupational Therapy",
+    desc: "Occupational therapy helps children develop the skills needed for daily activities, play, and learning. It focuses on improving fine motor skills, sensory processing, balance, coordination, and independence in everyday tasks.",
+    bullets: ["Fine motor skills development", "Sensory processing support", "Balance & coordination", "Daily living independence"],
+  },
+  {
+    name: "Behavioral Therapy",
+    desc: "Behavioral therapy uses evidence-based techniques to improve communication, learning, social skills, and adaptive behaviors. It also helps reduce challenging behaviors by teaching appropriate alternatives through positive reinforcement.",
+    bullets: ["Communication & social skills", "Evidence-based ABA techniques", "Positive reinforcement methods", "Reducing challenging behaviors"],
+  },
+  {
+    name: "Parent Training",
+    desc: "Parent training equips caregivers with practical strategies to support their child's development at home. It focuses on behavior management, communication techniques, and creating consistent routines to maximize progress.",
+    bullets: ["Behavior management strategies", "Communication techniques", "Consistent routine building", "Home-based skill support"],
+  },
+  {
+    name: "Developmental Support",
+    desc: "Developmental support promotes a child's overall growth across cognitive, language, social, emotional, and motor domains. It uses individualized activities and interventions to help children achieve age-appropriate developmental milestones.",
+    bullets: ["Cognitive & language growth", "Social & emotional development", "Motor domain interventions", "Age-appropriate milestone goals"],
+  },
+];
+
+export function NeuroSupportServicesList() {
+  const [activeService, setActiveService] = useState<string | null>(null);
+
+  const handleToggle = (name: string) => {
+    setActiveService(activeService === name ? null : name);
+  };
+
+  const handleBook = (serviceName: string) => {
+    const event = new CustomEvent("select-service", {
+      detail: { service: serviceName },
+    });
+    window.dispatchEvent(event);
+  };
+
+  return (
+    <div className="mt-8 grid gap-4 grid-cols-1">
+      {NEURO_SERVICES.map((service) => {
+        const isOpen = activeService === service.name;
+        return (
+          <div
+            key={service.name}
+            className={`rounded-xl border bg-white shadow-card transition-all duration-300 overflow-hidden ${
+              isOpen ? "border-sage-300 ring-2 ring-sage-100" : "border-sage-100 hover:border-sage-200"
+            }`}
+          >
+            <button
+              onClick={() => handleToggle(service.name)}
+              className="flex w-full items-center justify-between p-4 sm:p-5 text-left font-bold text-sage-950 transition hover:bg-sage-50/30 cursor-pointer"
+            >
+              <div className="flex items-center gap-3.5">
+                <div className={`p-2 rounded-lg transition-colors ${isOpen ? "bg-sage-800 text-white shadow-sm" : "bg-sage-100 text-sage-700"}`}>
+                  <Sparkles className="h-5 w-5 flex-shrink-0" aria-hidden="true" />
+                </div>
+                <span className="text-base sm:text-lg tracking-tight font-extrabold text-sage-950">{service.name}</span>
+              </div>
+              <span
+                className={`flex h-8 w-8 items-center justify-center rounded-full transition-all duration-300 flex-shrink-0 ${
+                  isOpen ? "rotate-180 bg-sage-800 text-white shadow-md" : "bg-sage-100 text-sage-600 hover:bg-sage-200"
+                }`}
+              >
+                <ChevronDown className="h-4.5 w-4.5" />
+              </span>
+            </button>
+
+            <AnimatePresence initial={false}>
+              {isOpen && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.25, ease: "easeInOut" }}
+                >
+                  <div className="border-t border-sage-100/60 p-5 bg-sage-50/20 space-y-4">
+                    <p className="text-sm leading-relaxed text-sage-800 font-semibold">
+                      {service.desc}
+                    </p>
+                    
+                    <div className="grid gap-2.5 text-xs text-sage-700 sm:grid-cols-2 pt-1">
+                      {service.bullets.map((bullet) => (
+                        <div key={bullet} className="flex items-center gap-2 bg-white/80 rounded-lg p-2.5 border border-sage-100/30 shadow-sm">
+                          <CheckCircle2 className="h-4 w-4 text-sage-600 flex-shrink-0" />
+                          <span className="font-bold text-sage-900">{bullet}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="pt-3.5 border-t border-sage-100/40 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                      <span className="text-[11px] font-bold uppercase tracking-wider text-sage-600/80">
+                        In-person & Virtual sessions available
+                      </span>
+                      <button
+                        onClick={() => handleBook(service.name)}
+                        className="inline-flex items-center justify-center rounded-full bg-sage-800 hover:bg-sage-950 px-5 py-2.5 text-xs font-bold text-white shadow-md transition hover:-translate-y-0.5 group cursor-pointer"
+                      >
+                        Book an Appointment
+                        <ArrowRight className="ml-1.5 h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-1" />
+                      </button>
+                    </div>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+        );
+      })}
+    </div>
+  );
+}

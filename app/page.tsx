@@ -23,7 +23,7 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { ContactForm } from "@/components/contact-form";
 import { PaymentPortal } from "@/components/payment-portal";
 import { contactDetails, stats } from "@/data/site";
-import { InteractiveServiceFinder, AnimatedFaqSection } from "@/components/interactive-features";
+import { InteractiveServiceFinder, AnimatedFaqSection, NeuroSupportServicesList } from "@/components/interactive-features";
 
 export const metadata: Metadata = {
   title: "Mindful Living | Professional Counselling and Therapy Services",
@@ -317,22 +317,7 @@ export default function HomePage() {
               title="Developmental care that includes the child, parents and daily routines."
               description="Neurodiversity recognizes natural differences in how children think, learn, sense, communicate and engage with the world. Mindful Living offers Occupational Therapy, Behaviour Therapy and parent involvement through individualized care plans."
             />
-            <div className="mt-8 grid gap-4 sm:grid-cols-2">
-              {[
-                "Occupational Therapy",
-                "Behaviour Therapy",
-                "Parent Guidance",
-                "Developmental Support",
-              ].map((item) => (
-                <div
-                  key={item}
-                  className="flex items-center gap-3 rounded-lg border border-sage-100 bg-white p-4 font-semibold text-sage-900 shadow-card"
-                >
-                  <Sparkles className="h-5 w-5 text-softblue-500" aria-hidden="true" />
-                  {item}
-                </div>
-              ))}
-            </div>
+            <NeuroSupportServicesList />
           </Reveal>
           <Reveal delay={120}>
             <div className="relative overflow-hidden rounded-2xl shadow-soft">

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Send } from "lucide-react";
 
 type FormStatus = "idle" | "submitting" | "success" | "error";
@@ -8,6 +8,24 @@ type FormStatus = "idle" | "submitting" | "success" | "error";
 export function ContactForm() {
   const [status, setStatus] = useState<FormStatus>("idle");
   const [feedback, setFeedback] = useState("");
+  const [selectedService, setSelectedService] = useState("");
+
+  useEffect(() => {
+    const handleSelect = (e: Event) => {
+      const customEvent = e as CustomEvent<{ service: string }>;
+      if (customEvent?.detail?.service) {
+        setSelectedService(customEvent.detail.service);
+        const element = document.getElementById("contact");
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    };
+    window.addEventListener("select-service", handleSelect as EventListener);
+    return () => {
+      window.removeEventListener("select-service", handleSelect as EventListener);
+    };
+  }, []);
 
   return (
     <form
@@ -107,7 +125,8 @@ export function ContactForm() {
           id="service"
           name="service"
           className="mt-2 w-full rounded-lg border border-sage-200 bg-white px-4 py-3 text-sage-950 shadow-sm transition focus:border-softblue-500 focus:outline-none"
-          defaultValue=""
+          value={selectedService}
+          onChange={(e) => setSelectedService(e.target.value)}
         >
           <option value="" disabled>
             Select a service
@@ -117,8 +136,9 @@ export function ContactForm() {
           <option>Relationship Counselling</option>
           <option>Child and Adolescent Support</option>
           <option>Occupational Therapy</option>
-          <option>Behaviour Therapy</option>
-          <option>Parent Guidance</option>
+          <option>Behavioral Therapy</option>
+          <option>Parent Training</option>
+          <option>Developmental Support</option>
         </select>
       </div>
 
